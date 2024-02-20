@@ -39,9 +39,9 @@
       <%= link_to "Log out", destroy_user_session_path, method: :delete, data: {turbo_method: :delete} %>
     </li>
 
-    <li>
+    <p class="letters">
       Voici ton email : <%= current_user.email %>
-    </li>
+    </p>
 
     <li>
       <%= link_to "My profile", user_path(current_user.id) %>  <!-- users#show-->
