@@ -29,6 +29,9 @@
     <li class="nav-item">
       <a class="nav-link" href="<%= new_event_path %>">Create</a>   <!-- events#new-->
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<%= users_path %>">Users</a>
+    </li>
 
     <ul>
   <% if user_signed_in? %>
@@ -41,7 +44,7 @@
     </li>
 
     <li>
-      <%= link_to "My profile", users_path(:id) %>  <!-- users#show-->
+      <%= link_to "My profile", user_path(current_user.id) %>  <!-- users#show-->
     </li>
 
     <li>
