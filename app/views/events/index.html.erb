@@ -1,6 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Events</h1>
+<div class="jumbotron">
+  <h1 class="display-4">Events</h1>
+  <p class="lead">You can see here all our events !</p>
+  <a class="btn btn-outline-danger btn-sm" href="<%= new_event_path%>" role="button">New event</a>
+  <hr class="my-4">
+  <br><br>
+</div>
+
 
 <div id="events">
   <% @events.each do |event| %>
@@ -10,5 +17,3 @@
     </p>
   <% end %>
 </div>
-
-<%= link_to "New event", new_event_path %>
